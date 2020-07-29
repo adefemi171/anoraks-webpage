@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar'
 
-function App() {
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
+import withStyles from '@material-ui/core/styles/withStyles'
+
+import './App.css';
+import generalStyle from './utils/theme'
+
+const theme = createMuiTheme(generalStyle)
+
+const styles = {
+  button: {
+      position: 'absolute',
+      right: '45%',
+      top: '80%'
+  }
+}
+
+const App = (props) => {
+  const { classes } = props
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+    <Navbar />
+      <div className='nav-container'>
+        <div className='firstPage'>
+          <Button
+            className={classes.button}
+            type='submit'
+            variant='contained'
+            color='primary'
+          >
+            Learn more
+          </Button>
+        </div>
+        <div className='secondPage'>
+          Daddy
+        </div>
+      </div>
+    </ThemeProvider>
   );
 }
 
-export default App;
+export default withStyles(styles)(App);

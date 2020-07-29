@@ -1,38 +1,37 @@
-.App {
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+.firstPage {
+  background: url(./images/landingPage.jpg) no-repeat center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
   text-align: center;
+  position: relative;
+  display: table
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.secondPage {
+  background: url(./images/plainbackground.jpg) no-repeat center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-attachment: fixed;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-container {
+  margin-top: 40px;
+  height: 100%
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body svg {
+  color: #fff
 }
-
-.App-link {
-  color: #61dafb;
+.nav-container svg {
+  color: #fff
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a{
+  text-decoration: none
 }
