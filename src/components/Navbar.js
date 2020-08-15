@@ -9,6 +9,7 @@ import IconButton from '@material-ui/core/IconButton'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 import img from '../images/anoraksIcon.jpeg'
+import history from './../history';
 
 const styles = {
     register: {
@@ -39,16 +40,16 @@ const Navbar = (props) => {
                             </div>
                             <div style={{ marginRight: 15, color: 'black' }}> ANORAKS </div>
                         </Fragment>
-                        <Button>
+                        <Button onClick={() => history.push('/Home')}>
                             Home
                         </Button>
-                        <Button>
+                        <Button onClick={() => history.push('/EventStories')}>
                             Event Stories
                         </Button>
-                        <Button>
+                        <Button onClick={() => history.push('/Sponsors')}>
                             Sponsors
                         </Button>
-                        <Button>
+                        <Button onClick={() => history.push('/About')}>
                             About
                         </Button>
                         <div className={classes.register}>
